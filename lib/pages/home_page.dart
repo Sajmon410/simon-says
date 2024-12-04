@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mylist/util/dialog_box.dart';
 import 'package:mylist/util/todo_tile.dart';
 
 class HomePage extends StatefulWidget {
@@ -20,6 +21,13 @@ void checkBoxChanged(bool? value, int index){
     toDoList[index][1]=!toDoList[index][1];
   });
 }
+
+void createNewTask(){
+  showDialog(context: context,
+   builder: (context){
+      return DialogBox();
+   });
+}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +37,7 @@ void checkBoxChanged(bool? value, int index){
         title: Text("TO DO"),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: createNewTask,
         backgroundColor: Colors.yellow,
         child: Icon(Icons.add)),
       body: ListView.builder(
