@@ -1,4 +1,8 @@
+import 'dart:nativewrappers/_internal/vm/lib/ffi_allocation_patch.dart';
+
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:mylist/data/database.dart';
 import 'package:mylist/util/dialog_box.dart';
 import 'package:mylist/util/todo_tile.dart';
 
@@ -10,28 +14,45 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
+//reference the hive
+final _myBox=Hive.box('mybox');
+ToDoDataBase db = ToDoDataBase();
   final _controller = TextEditingController();
-  //list to do tasks
-  List toDoList=[
-    ["Make A Tutorial",false],
-    ["Do Excersise",false],
-  ];
+ 
+ @override
+  void initState() {
+    //  implement initState
+    if(_myBox.get("TODOLIST")==null){
+      db.createInitialData();
+    }else{
+      db.loadData();
+    }
+    super.initState();
+  }
+
 
 void checkBoxChanged(bool? value, int index){
   setState(() {
-    toDoList[index][1]=!toDoList[index][1];
+    db.toDoList[index][1]=!db.toDoList[index][1];
   });
+  db.updateDataBase();
 }
 
 //save new task
 void saveNewTask(){
   setState(() {
-    toDoList.add([ _controller.text, false]);
+    db.toDoList.add([ _controller.text, false]);
      _controller.clear();
   });
       Navigator.of(context).pop();
-     
+       db.updateDataBase();
+}
+
+void updateTask(int index, String newTask){
+  setState(() {
+    db.toDoList[index][0] = newTask;
+    db.updateDataBase();
+  });
 }
 
 void createNewTask(){
@@ -44,11 +65,30 @@ void createNewTask(){
       );
    });
 }
+void editTask(index){
+  _controller.text = db.toDoList[index][0];
+  showDialog(context: context,
+   builder: (context){
+    return DialogBox(
+      controller: _controller,
+     onSave: () { 
+      updateTask(index,_controller.text);
+     _controller.clear();
+    Navigator.of(context).pop();
+     },
+      onCancel: (){Navigator.of(context).pop();
+      _controller.clear();}
+      );
+   });
+
+}
 void deleteTask(int index){
   setState(() {
-    toDoList.removeAt(index);
+    db.toDoList.removeAt(index);
   });
+    db.updateDataBase();
 }
+
 
   @override
   Widget build(BuildContext context) {
@@ -64,13 +104,14 @@ void deleteTask(int index){
         child: Icon(Icons.add)
         ),
       body: ListView.builder(
-       itemCount: toDoList.length,
+       itemCount: db.toDoList.length,
        itemBuilder:(context, index) {
         return ToDoTile(
-          taskName: toDoList[index][0], 
-          taskCompleted: toDoList[index][1], 
+          taskName: db.toDoList[index][0], 
+          taskCompleted: db.toDoList[index][1], 
           onChanged: (value) =>checkBoxChanged(value,index),
           deleteFunction: (context) => deleteTask(index),
+          editFunction: (context) => editTask(index),
           );
        },
       ),
