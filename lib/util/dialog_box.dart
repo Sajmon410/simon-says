@@ -22,7 +22,7 @@ class DialogBox extends StatelessWidget {
         ),
         content: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Container(
+          child: SizedBox(
             height: 110,
             
             child: Column(

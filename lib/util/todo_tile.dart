@@ -60,7 +60,7 @@ class ToDoTile extends StatelessWidget {
                       : TextDecoration.none,
                 ),
               ),
-              Spacer(),
+              const Spacer(),
              EditButton(
               onPressed: (){if(editFunction!=null){
                 editFunction!(context,index);

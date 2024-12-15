@@ -73,14 +73,14 @@ class _HomePageState extends State<HomePage> {
           onSave: () {
             updateTask(index, _controller.text);
             Navigator.of(context).pop();
-            Future.delayed(Duration(milliseconds: 300),(){
+            Future.delayed(const Duration(milliseconds: 300),(){
               _controller.clear();
             });
             
           },
           onCancel: () {
             Navigator.of(context).pop();
-              Future.delayed(Duration(milliseconds: 300), () {
+              Future.delayed(const Duration(milliseconds: 300), () {
                _controller.clear(); // Očisti kontroller nakon što se dijalog zatvori
             });
             
@@ -104,12 +104,12 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.yellow[200],
       appBar: AppBar(
         backgroundColor: Colors.yellow,
-        title: Text("Simon Says"),
+        title: const Text("Simon Says"),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: createNewTask,
         backgroundColor: Colors.yellow,
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
       body: ListView.builder(
         itemCount: db.toDoList.length,

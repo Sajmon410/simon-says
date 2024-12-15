@@ -10,7 +10,7 @@ class EditButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return   IconButton(
-     icon: Icon(Icons.edit),
+     icon: const Icon(Icons.edit),
       onPressed: onPressed,  // Poziv edit funkcije sa indexom
     );
   }
