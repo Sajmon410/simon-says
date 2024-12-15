@@ -67,6 +67,7 @@ class _HomePageState extends State<HomePage> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
     showDialog(
       context: context,
+      barrierDismissible: false,
       builder: (context) {
         return DialogBox(
           controller: _controller,
@@ -111,7 +112,22 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.yellow,
         child: const Icon(Icons.add),
       ),
-      body: ListView.builder(
+      body: db.toDoList.isEmpty
+      ? const Center(
+        child: Text(
+          "No tasks left.\nTap + to add a new one!",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 18,
+            color: Colors.black,
+          ),
+        ),
+      )
+      
+      
+      
+      
+     : ListView.builder(
         itemCount: db.toDoList.length,
         itemBuilder: (context, index) {
           return ToDoTile(

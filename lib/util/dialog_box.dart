@@ -30,13 +30,16 @@ class DialogBox extends StatelessWidget {
               children: [
                 TextField(
                   controller: controller,
+
                   autofocus: true,
                   decoration: InputDecoration(
+                    fillColor: Colors.black,
                     border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                     ),
                 
                   hintText: "Add a new task",
+    
                   ),
           
                 ),
