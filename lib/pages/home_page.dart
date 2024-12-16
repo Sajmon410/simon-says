@@ -35,6 +35,7 @@ class _HomePageState extends State<HomePage> {
 
   void saveNewTask() {
     setState(() {
+      if(_controller.text.trim().isEmpty){return;}
       db.toDoList.add([_controller.text, false]);
       _controller.clear();
     });
@@ -72,12 +73,14 @@ class _HomePageState extends State<HomePage> {
         return DialogBox(
           controller: _controller,
           onSave: () {
+            if(_controller.text.trim().isNotEmpty)
+            {
             updateTask(index, _controller.text);
             Navigator.of(context).pop();
             Future.delayed(const Duration(milliseconds: 300),(){
               _controller.clear();
             });
-            
+            }
           },
           onCancel: () {
             Navigator.of(context).pop();
