@@ -52,14 +52,24 @@ class ToDoTile extends StatelessWidget {
                 activeColor: Colors.black,
               ),
               //task name
-              Text(
+                
+           ConstrainedBox(
+              constraints: const BoxConstraints(
+                maxWidth: 199, // Maksimalna širina za tekst
+              ),
+              child: Text(
                 taskName,
+                maxLines: 1,
+               overflow: TextOverflow.ellipsis, 
                 style: TextStyle(
                   decoration: taskCompleted
                       ? TextDecoration.lineThrough
                       : TextDecoration.none,
                 ),
               ),
+            ),
+           
+           
               const Spacer(),
              EditButton(
               onPressed: (){if(editFunction!=null){

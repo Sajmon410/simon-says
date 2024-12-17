@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:mylist/util/my_button.dart';
 
 class DialogBox extends StatelessWidget {
@@ -24,13 +25,14 @@ class DialogBox extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: SizedBox(
             height: 110,
-            
+        
             child: Column(
+            
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 TextField(
                   controller: controller,
-
+      
                   autofocus: true,
                   decoration: InputDecoration(
                     fillColor: Colors.black,
@@ -41,7 +43,6 @@ class DialogBox extends StatelessWidget {
                   hintText: "Add a new task",
     
                   ),
-          
                 ),
               Row(
                  mainAxisAlignment: MainAxisAlignment.center,

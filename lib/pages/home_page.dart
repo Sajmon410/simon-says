@@ -118,7 +118,7 @@ class _HomePageState extends State<HomePage> {
       body: db.toDoList.isEmpty
       ? const Center(
         child: Text(
-          "No tasks left.\nTap + to add a new one!",
+          "No tasks yet.\nTap + to add a new one!",
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 18,

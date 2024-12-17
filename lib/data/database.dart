@@ -9,8 +9,7 @@ class ToDoDataBase{
   //initial
   void createInitialData(){
     toDoList=[
-      ["Make Lunch",false],
-      ["Do Excersise", false],
+
     ];
   }
 //load the data
