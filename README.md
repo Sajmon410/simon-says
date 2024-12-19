@@ -18,5 +18,7 @@ No tasks:
 ![Simulator Screenshot - iPhone 16 - 2024-12-15 at 23 05 10](https://github.com/user-attachments/assets/2f82b3c5-de16-4314-a095-f122254732e7)
 Tasks:
 ![Simulator Screenshot - iPhone 16 - 2024-12-14 at 18 10 33](https://github.com/user-attachments/assets/1c2ba336-da0e-4f5c-a52f-a22b1f888617)
+Edit task:
 ![Simulator Screenshot - iPhone 16 - 2024-12-14 at 18 10 47](https://github.com/user-attachments/assets/b1f36374-c079-4917-8fd9-95106e4867c6)
+Add new task:
 ![Simulator Screenshot - iPhone 16 - 2024-12-14 at 18 11 12](https://github.com/user-attachments/assets/5149ad59-49ed-438d-b691-c79159c471c2)
