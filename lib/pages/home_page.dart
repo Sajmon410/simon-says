@@ -105,14 +105,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow[200],
+      backgroundColor:  Color(0xFF10001B),
       appBar: AppBar(
-        backgroundColor: Colors.yellow,
-        title: const Text("Simon Says"),
+        backgroundColor:Color.fromARGB(255, 135, 48, 181),
+        title: const Text("Simon Says",
+        style: TextStyle( color: Colors.white
+        )
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: createNewTask,
-        backgroundColor: Colors.yellow,
+        backgroundColor: Color.fromARGB(255, 135, 48, 181),
         child: const Icon(Icons.add),
       ),
       body: db.toDoList.isEmpty
@@ -122,7 +125,7 @@ class _HomePageState extends State<HomePage> {
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 18,
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
       )
