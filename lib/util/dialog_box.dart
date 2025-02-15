@@ -36,7 +36,7 @@ class DialogBox extends StatelessWidget {
       
                   autofocus: true,
                   decoration: InputDecoration(
-                    fillColor: Colors.black,
+                    fillColor: Colors.white,
                     border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                     ),
