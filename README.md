@@ -1,5 +1,5 @@
 # Organizer flutter app (Color re-design in progress...)<br />
-Still not tested on Android.
+## Still not tested on Android.
 ## No tasks:
 ![Simulator Screenshot - iPhone 16 - 2024-12-15 at 23 05 10](https://github.com/user-attachments/assets/2f82b3c5-de16-4314-a095-f122254732e7)
 ## Tasks:
