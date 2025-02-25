@@ -1,14 +1,16 @@
 # Organizer flutter app (Color re-design in progress...)<br />
 ## Still not tested on Android.
 ## No tasks:
-![Simulator Screenshot - iPhone 16 - 2024-12-15 at 23 05 10](https://github.com/user-attachments/assets/2f82b3c5-de16-4314-a095-f122254732e7)
+![PHOTO-2025-02-25-23-59-59](https://github.com/user-attachments/assets/55cc28e8-64df-43b9-b486-f71a5fbf8ea7)
+
 ## Tasks:
-![Simulator Screenshot - iPhone 16 - 2024-12-14 at 18 10 33](https://github.com/user-attachments/assets/1c2ba336-da0e-4f5c-a52f-a22b1f888617)
-## Done:
-![Simulator Screenshot - iPhone 16 - 2024-12-25 at 19 19 39](https://github.com/user-attachments/assets/4404f8a0-19a9-412b-b5fb-24726afb9191)
+![WhatsApp Image 2025-02-26 at 00 00 00](https://github.com/user-attachments/assets/e15cdf7a-53f7-47cc-96a3-60f11eaa58f1)
+
 ## Remove with sliding to left:
-![Simulator Screenshot - iPhone 16 - 2024-12-25 at 19 20 36](https://github.com/user-attachments/assets/a3a4a48b-1790-4d06-981c-43dde9ce738b)
+![WhatsApp Image 2025-02-26 at 00 00 00 (1)](https://github.com/user-attachments/assets/bed900c7-cd98-4940-af7e-cb9a5e7a27d9)
+
 ## Edit:
-![Simulator Screenshot - iPhone 16 - 2024-12-14 at 18 10 47](https://github.com/user-attachments/assets/b1f36374-c079-4917-8fd9-95106e4867c6)
+![WhatsApp Image 2025-02-26 at 00 00 01](https://github.com/user-attachments/assets/37fb1f90-5e8c-4b3d-acb4-0b9d65d6ebf1)
+
 ## Add new task:
-![Simulator Screenshot - iPhone 16 - 2024-12-14 at 18 11 12](https://github.com/user-attachments/assets/5149ad59-49ed-438d-b691-c79159
+![WhatsApp Image 2025-02-26 at 00 00 01 (1)](https://github.com/user-attachments/assets/7333afbc-a7c8-4346-b9d8-c11334b1b782)
