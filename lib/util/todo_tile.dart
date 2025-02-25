@@ -29,12 +29,13 @@ class ToDoTile extends StatelessWidget {
         endActionPane: ActionPane(
           motion: const StretchMotion(),
           children: [
-            SlidableAction(
-              onPressed: deleteFunction,
-              icon: Icons.delete,
-              backgroundColor: const Color.fromARGB(155, 247, 16, 16),
-              borderRadius: BorderRadius.circular(12),
-            ),
+           SlidableAction(
+          onPressed: deleteFunction,
+          backgroundColor: const Color.fromARGB(255, 190, 3, 3), // Red background
+          borderRadius: BorderRadius.circular(12),
+          foregroundColor: Colors.white, // Ensures icon color is white
+          icon: Icons.delete,
+        ),
           ],
         ),
         child: Container(
@@ -50,6 +51,7 @@ class ToDoTile extends StatelessWidget {
                 value: taskCompleted,
                 onChanged: onChanged,
                 activeColor: Colors.black,
+                side: BorderSide(color: Colors.white, width: 2),
               ),
               //task name
                 

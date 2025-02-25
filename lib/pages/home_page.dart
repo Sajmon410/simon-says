@@ -115,8 +115,8 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: createNewTask,
-        backgroundColor: Color.fromARGB(129, 158, 1, 255),
-        child: const Icon(Icons.add),
+        backgroundColor: Color.fromARGB(142, 158, 1, 255),
+        child: const Icon(Icons.add, color: Colors.white,),
       ),
       body: db.toDoList.isEmpty
       ? const Center(
