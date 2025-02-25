@@ -107,7 +107,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor:  Color(0xFF10001B),
       appBar: AppBar(
-        backgroundColor:Color.fromARGB(255, 135, 48, 181),
+        backgroundColor:Color.fromARGB(129, 158, 1, 255),
         title: const Text("Simon Says",
         style: TextStyle( color: Colors.white
         )
@@ -115,7 +115,7 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: createNewTask,
-        backgroundColor: Color.fromARGB(255, 135, 48, 181),
+        backgroundColor: Color.fromARGB(129, 158, 1, 255),
         child: const Icon(Icons.add),
       ),
       body: db.toDoList.isEmpty

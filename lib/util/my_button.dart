@@ -9,12 +9,17 @@ class MyButton extends StatelessWidget {
     required this.onPressed,
     });
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialButton(
-      onPressed: onPressed,
-      color: Color(0xFF10001B),
-      child: Text(text,style: TextStyle(color: Colors.white ))
-    );
-  }
-}
+@override
+Widget build(BuildContext context) {
+  return MaterialButton(
+    onPressed: onPressed,
+    color: Color(0xFF10001B),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(15), // Set border radius
+    ),
+    child: Text(
+      text,
+      style: TextStyle(color: Colors.white),
+    ),
+  );
+}}
