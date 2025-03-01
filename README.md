@@ -1,5 +1,5 @@
 # Simon Says flutter app (Color re-design in progress...)<br />
-## Still not tested on Android.
+## Still not working on Android.
 ## No tasks:
 ![PHOTO-2025-02-25-23-59-59](https://github.com/user-attachments/assets/55cc28e8-64df-43b9-b486-f71a5fbf8ea7)
 
